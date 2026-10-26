@@ -40,3 +40,7 @@
 # остаток от деления — x % y.
 #print(11 // 4) = 2
 #print(11 % 4) = 3
+
+number = str(input())
+result = f"doc_{number}"
+print(result)
