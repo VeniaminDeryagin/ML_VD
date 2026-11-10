@@ -1,0 +1,246 @@
+#  A
+#   На новогоднем утреннике в детском саду дети должны прокричать «Три!», чтобы зажглась ёлочка. 
+#  Но с порядком чисел у них пока сложности – они выкрикивают всё подряд.
+#  Ваша задача — написать программу, которая ждёт правильный крик и только после этого зажигает ёлочку.
+#  scream = input()
+#  while scream != 'Три!':
+#      print("Режим ожидания...")
+#      scream = input()
+#  else:
+#      print("Ёлочка, гори!")
+# B
+# Вводятся строки описывающие придорожную местность.
+# В конце поездки вводится "Приехали!"
+# road_country = input()
+# count = 0
+# while road_country != 'Приехали!':
+#     if "зайка" in road_country:
+#         count = count + 1
+#         road_country = input()
+#     else:
+#         road_country = input()
+# print(count)
+
+# C
+# Давайте поможем ребятам в детском саду выучить числа! Они называют два числа — начало и конец последовательности, 
+# а мы выводим все числа между ними.
+# start = int(input())
+# end = int(input())
+# for i in range(start, end + 1):
+#     print(i, end=' ')
+
+# D
+# Ваша задача — вывести все числа от начала до конца в правильном порядке.
+# a = int(input())
+# b = int(input())
+# step = 1
+# if a > b:
+#     step = -1
+# for i in range(a, b + step, step):
+#     print(i, end=" ")
+
+# E
+# В продуктовом магазине объявили акцию:
+# скидка 10% на все товары, которые стоят 500 тугриков и больше.
+# Вам нужно разработать программу для кассового автомата, которая считает итоговую сумму покупки с учётом скидки.
+# total_price = 0
+# while price := float(input()):
+#     if price >= 500:
+#         price = price * 0.9
+#     total_price = total_price + price
+# print(total_price)
+
+# F
+# В одном из местных НИИ очень часто требуется находить наибольший общий делитель двух чисел.
+# a = int(input())
+# b = int(input())
+# while b:
+#     a, b = b, a % b
+# print(a)
+
+# G
+# Требуется находить наименьшее общее кратное (НОК) двух чисел.
+# a = int(input())
+# b = int(input())
+# mult = a * b
+# while b:
+#     a, b = b, a % b
+# print(int(mult / a))
+
+# H
+# В первой строке записана весьма полезная информация. Во второй натуральное число 
+# N – количество раз, которое ее нужно повторить, чтобы она закрепилась.
+# string = input()
+# N = int(input())
+# for _ in range(N):
+#     print(string)
+
+# I
+# Требуется находить факториал числа.
+# result = 1
+# for i in range(2, int(input()) + 1):
+#     result *= i
+# print(result)
+
+# J
+# Каждый маршрут представляет собой последовательность шагов в одном из четырёх направлений:
+# СЕВЕР
+# ЮГ
+# ВОСТОК
+# ЗАПАД
+# Для формализации маршрутов была выбрана географическая система координат в которой две оси (СЕВЕР-ЮГ и ВОСТОК-ЗАПАД), 
+# а единичный отрезок по каждой из них равен одному шагу.
+# Напишите программу, которая по заданному маршруту определит, в какой именно точке мы очутимся, если изначально находимся в точке (0;0)
+# a = 0
+# b = 0
+# while (direction := input()) != "СТОП":
+#     steps = int(input())
+#     match direction:
+#         case "СЕВЕР":
+#             a = a + steps
+#         case "ЮГ":
+#             a = a - steps
+#         case "ВОСТОК":
+#             b = b + steps
+#         case "ЗАПАД":
+#             b = b - steps
+# print(a)
+# print(b)
+
+# K
+# Найти сумму цифр числа.
+# number = int(input())
+# total = 0
+# while number > 0:
+#     last_num = number % 10
+#     total += last_num
+#     number = number // 10
+# print(total)
+
+# L
+# Найти максимальную цифру числа.
+# number = int(input())
+# total = 0
+# max_num = 0
+# while number > 0:
+#     last_num = number % 10
+#     if last_num > max_num:
+#         max_num = last_num
+#     total += last_num
+#     number = number // 10
+# print(max_num)
+
+# M
+# Первым ходит тот, чьё имя идёт раньше в алфавитном порядке.
+# Определите, кто из игроков начнёт игру, используя цикл for.
+# N = int(input())
+# first_player = ""
+# for i in range(N):
+#     name = input()
+#     if i == 0 or name < first_player:
+#         first_player = name
+# print(first_player)
+
+# N
+# Напишите программу, которая определяет, является ли число простым.
+# a = int(input())
+
+# if a < 2:
+#     print("NO")
+# else:
+#     i = 2
+#     while i * i <= a and a % i != 0:
+#         i += 1
+#     print("YES" if i * i > a else "NO")
+
+# O
+# Посчитаем, в скольких строках встречается зайка!
+# n = int(input())
+# count = 0
+# for i in range(n):
+#     location = input()
+#     if "зайка" in location:
+#         count += 1
+# print(count)
+
+# P
+# Напишите программу, которая проверяет, является ли заданное число палиндромом. В этот раз будем использовать цикл while
+# n = int(input())
+# original = n
+# reverse_num = 0
+# while n > 0:
+#     last_num = n % 10
+#     reverse_num = reverse_num * 10 + last_num
+#     n = n // 10
+# if original == reverse_num:
+#     print("YES")
+# else:
+#     print("NO")
+
+# Q
+# Напишите программу для очистки числа от всех чётных цифр, используя цикл while.
+# n = int(input())
+# temp = 0
+# while n > 0:
+#     last_num = n % 10
+#     n = n // 10
+#     if last_num % 2 != 0:
+#         temp = temp * 10 + last_num
+# reversed_str = str(temp)[::-1]
+# reversed_num = int(reversed_str)
+# print(reversed_num)
+
+# R
+# Напишите программу для разложения числа на простые множители.
+# n = int(input())
+# divider = 2
+# first = True
+# while n > 1:
+#     while n % divider == 0:
+#         if not first:
+#             print(" * ", end="")
+#         print(divider, end="")
+#         first = False
+#         n = n // divider
+#     divider += 1
+# print()
+
+# S
+# Ваша задача — написать программу, которая угадывает загаданное целое число от 1 до 1000 с использованием цикла while.
+# Пользователь (или тестирующая система) загадывает число и не сообщает его программе.
+# Угадать число нужно не более чем за 10 попыток.
+# low = 1
+# high = 1000
+
+# while True:
+#     middle_answer = (low + high) // 2
+#     print(middle_answer)
+#     answer = input()
+#     if answer == "Угадал!":
+#         break
+#     elif answer == "Больше":
+#         low = middle_answer + 1
+#     elif answer == "Меньше":
+#         high = middle_answer - 1
+
+# T
+# блокчейны.. На первой строке вводится натуральное число N — количество блоков. Далее следуют N чисел 
+# bn, каждое на отдельной строке.
+
+# prev = 0
+# bad = -1
+
+# n = int(input())
+# for i in range(n):
+#     b = int(input())
+#     hn = b % 256
+#     r = (b // 256) % 256
+#     m = b // 65536
+#     expected_hash = (37 * (m + r + prev)) % 256
+
+#     if hn == (37 * (m + r + prev)) % 256 and 0 <= hn <= 99:
+#         prev = hn
+#     else:
+#         bad = i
+#         break
+# print(bad)
